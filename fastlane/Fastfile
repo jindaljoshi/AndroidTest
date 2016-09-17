@@ -28,8 +28,7 @@ platform :android do
 desc "Submit a new Beta Build to HockeyApp Beta"
   lane :betaHockey do
     gradle(task: "assembleRelease")
-    increment_build_number
-    hockey(api_token: "67c77a7c9c634fd49c52c88409cba9a7",apk: "/Users/jindaljoshi/Desktop/MyApplicationFastLane/app/build/outputs/apk/app-debug.apk",notes: "Test2"
+    hockey(api_token: "67c77a7c9c634fd49c52c88409cba9a7",apk: "/app/build/outputs/apk/app-debug.apk",notes: "Test2"
 )
   end
 
