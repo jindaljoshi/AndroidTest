@@ -11,7 +11,7 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.102.0"
+fastlane_version "1.103.0"
 
 default_platform :android
 
@@ -23,13 +23,6 @@ platform :android do
   desc "Runs all the tests"
   lane :test do
     gradle(task: "test")
-  end
-
-desc "Submit a new Beta Build to HockeyApp Beta"
-  lane :betaHockey do
-    gradle(task: "assembleRelease")
-    hockey(api_token: "67c77a7c9c634fd49c52c88409cba9a7",apk:GRADLE_APK_OUTPUT_PATH,notes: "Test2"
-)
   end
 
   desc "Submit a new Beta Build to Crashlytics Beta"

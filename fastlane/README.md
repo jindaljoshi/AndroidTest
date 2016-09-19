@@ -11,11 +11,6 @@ sudo gem install fastlane
 fastlane android test
 ```
 Runs all the tests
-### android betaHockey
-```
-fastlane android betaHockey
-```
-Submit a new Beta Build to HockeyApp Beta
 ### android beta
 ```
 fastlane android beta
