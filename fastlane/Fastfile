@@ -24,6 +24,13 @@ platform :android do
   lane :test do
     gradle(task: "test")
   end
+  
+  desc "Submit a new Beta Build to HockeyApp Beta"
+  lane :betaHockey do
+    gradle(task: "assembleRelease")
+    hockey(api_token: "67c77a7c9c634fd49c52c88409cba9a7",apk: "/app/build/outputs/apk/app-stubbed-release.apk",notes: "Changelog"
+)
+  end
 
   desc "Submit a new Beta Build to Crashlytics Beta"
   lane :beta do
